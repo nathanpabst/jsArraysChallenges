@@ -1,23 +1,21 @@
-var challengeOneInput = "jumbo shrimp";
-var splitChallengeOneInput = 
-challengeOneInput.split(" ");
-var input1 = splitChallengeOneInput[0].split("");
-var input2 = splitChallengeOneInput[1].split("");
-var score1;
-var score2;
-var challengeOneElement = document.getElementById("challenge-1");
+// 
 
-for (var i = 0; i < input1.length; i++){
-    score1 += input1[i].charCodeAt();
-};
+var challengeTwoInputA = [1,2,3,4,5,6,7,8,9];
+var challengeTwoInputB = [12,13,14];
+var challengeTwoInputC = [9,2,4,7,3];
 
-for (var j = 0; j < input2.length; j++){
-    score2 += input2[j].charCodeAt();
-};
-
-if(score1 > score2){
-    challengeOneElement.innerHTML = ('<h1>' + input1.join("") + '</h1>');
-}else {
-    challengeOneElement.innerHTML = ('<h1>' + input2.join("") + '</h1>')
+var str = "";
+for (var i = 0; i < challengeTwoInputA.length; i++){
+    str = challengeTwoInputA[i].toString();
+if(str.includes("3")){
+    challengeTwoInputA[i] = 1 * (str.replace(/[3]/g, 7));
+}else if (str.includes("7")) {
+    challengeTwoInputA[i] = 1 * (str.replace(/[7]/g, 3));
+}else{
+    challengeTwoInputA[i] = 1 * str;
+    }
 }
+document.getElementById("challenge-2").innerHTML = challengeTwoInputA;
+// console.log(challengeTwoInputA);
+
 
