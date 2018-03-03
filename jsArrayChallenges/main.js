@@ -1,21 +1,13 @@
 // 
-
-var challengeTwoInputA = [1,2,3,4,5,6,7,8,9];
-var challengeTwoInputB = [12,13,14];
-var challengeTwoInputC = [9,2,4,7,3];
-
-var str = "";
-for (var i = 0; i < challengeTwoInputA.length; i++){
-    str = challengeTwoInputA[i].toString();
-if(str.includes("3")){
-    challengeTwoInputA[i] = 1 * (str.replace(/[3]/g, 7));
-}else if (str.includes("7")) {
-    challengeTwoInputA[i] = 1 * (str.replace(/[7]/g, 3));
-}else{
-    challengeTwoInputA[i] = 1 * str;
-    }
-}
-document.getElementById("challenge-2").innerHTML = challengeTwoInputA;
-// console.log(challengeTwoInputA);
+//********CHALLENGE-2*************/
+// 
+//********CHALLENGE-3*************/
+//Given an array of more than 3 numbers where all numbers are equal except for one. Display the one unique number!
 
 
+var challengeThreeInputA = [ 1, 1, 1, 2, 1, 1 ];  // 2
+var challengeThreeInputB = [ 0, 0, 0, 0, 0, 0, 0, 0.55, 0, 0 ];  // 0.55
+
+var uniqueNum = Math.max.apply(Math, challengeThreeInputA);
+document.getElementById("challenge-3").innerHTML = '<h2>' + uniqueNum + '</h2>';
+console.log(uniqueNum);
